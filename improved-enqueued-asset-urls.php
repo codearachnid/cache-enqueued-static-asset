@@ -3,7 +3,7 @@
  * Plugin Name: Improve Enqueued Asset URLs
  * Plugin URI:
  * Description: Improve caching for browsers by improving enqueued asset URLs
- * Version: 0.0.1
+ * Version: 1.0.0
  * Author: Timothy Wood (@codearachnid)
  * Author URI: http://www.codearachnid.com
  * Author Email: tim@imaginesimplicity.com
@@ -21,7 +21,16 @@
 if ( ! defined( 'ABSPATH' ) ) die( '-1' );
 
 function improved_enqueued_asset_urls( $src ){
-	return $src;
+	
+	$param_keys_to_remove = apply_filters( 'improved_enqueued_asset_urls_keys', array( 'ver' ) );
+	$pattern = apply_filters( 'improved_enqueued_asset_urls_pattern', '/\?%1$s(=[^&]*)?|&%1$s(\=[^&]*)?(?=&|$)|^%1$s(\=[^&]*)?(&|$)/' );
+	$patterns = array();
+
+	foreach( $param_keys_to_remove as $key ){
+		$patterns[] = sprintf( $pattern, $key );
+	}
+
+	return apply_filters( 'improved_enqueued_asset_urls', preg_replace($patterns, '', $src), $param_keys_to_remove, $pattern );
 }
 
 add_filter( 'script_loader_src', 'improved_enqueued_asset_urls', 100, 1 );
