@@ -3,7 +3,7 @@
  * Plugin Name: Improve Enqueued Asset URLs
  * Plugin URI:
  * Description: Improve caching for browsers by improving enqueued asset URLs
- * Version: 1.0.0
+ * Version: 1.0.1
  * Author: Timothy Wood (@codearachnid)
  * Author URI: http://www.codearachnid.com
  * Author Email: tim@imaginesimplicity.com
