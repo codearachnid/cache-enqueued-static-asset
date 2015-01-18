@@ -19,7 +19,7 @@ Installing the plugin is easy. Just follow these steps:
 
 1. From the administration part of your site, navigate to Plugins -> Add New.
 2. Select the "Upload Plugin" button and hit "Choose File."
-3. When the popup appears select the improved-enqueued-asset-urls-x.x.x.zip file from your desktop. (The 'x.x.x' will change depending on the current version number).
+3. When the popup appears select the improve-enqueued-asset-urls-x.x.x.zip file from your desktop. (The 'x.x.x' will change depending on the current version number).
 4. Follow the on-screen instructions and wait as the upload completes.
 5. When the upload is finished, activate the plugin via the prompt. A message will show confirming a successful activation.
 
