@@ -68,7 +68,7 @@ banner-772x250.png
 banner-1455x500.png
 icon-128x128.png
 icon-256x256.png
-color-scheme.png
+icon-512x512.png
 README.md
 LICENSE
 .git
